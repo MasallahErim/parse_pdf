@@ -37,3 +37,20 @@ Click the "View Data" button to display the extracted data in a table format.
 
 --> docker-compose stop
 
+## Repository and Setup
+
+To get started with this project, clone the repository from GitHub and navigate to the project directory:
+
+```sh
+git clone https://github.com/MasallahErim/parse_pdf
+cd parse_pdf
+```
+
+After navigating to the project directory, you can start the services by running:
+
+```sh
+docker-compose up
+```
+
+This will set up and run the web application and database services.
+
