@@ -1,0 +1,50 @@
+project-root/
+├── Dockerfile
+├── docker-compose.yml
+├── requirements.txt
+├── app.py
+├── api/
+│ ├── controller/
+│ │ ├── execute_pdf/
+│ │ │ ├── images/
+│ │ │ │ └── init.py
+│ │ │ ├── parse_pdf.py
+│ │ │ ├── singleton.py
+│ │ ├── insert_data/
+│ │ │ ├── init.py
+│ │ │ ├── insert_data.py
+│ │ │ ├── specific_add_data_functions.py
+│ │ ├── OCR/
+│ │ │ ├── init.py
+│ │ │ ├── img_to_text.py
+│ │ ├── process/
+│ │ │ ├── saved_pdf/
+│ │ │ │ ├── budurpdf.pdf
+│ │ │ │ ├── fw9.pdf
+│ │ │ │ ├── kendipdfem.pdf
+│ │ │ │ ├── Token.pdf
+│ │ │ ├── parse_pdf.py
+│ │ │ ├── save_upload_pdf.py
+│ ├── model/
+│ │ ├── init.py
+│ │ ├── Address.py
+│ │ ├── FigureCaption.py
+│ │ ├── Footer.py
+│ │ ├── Formula.py
+│ │ ├── Header.py
+│ │ ├── Images.py
+│ │ ├── ListItem.py
+│ │ ├── NarrativeText.py
+│ │ ├── PageBreak.py
+│ │ ├── PdfDocs.py
+│ │ ├── Tables.py
+│ │ ├── Texts.py
+│ │ ├── Title.py
+│ │ ├── UncategorizedText.py
+│ ├── view/
+│ │ ├── query_view_data/
+│ │ │ ├── init.py
+│ │ │ ├── view.py
+│ │ ├── templates/
+│ │ │ ├── upload.html
+│ │ │ ├── viewData.html

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Data</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        select {
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>View Data</h1>
+        <form action="/view_data" method="post">
+            <label for="table_name">Select Table:</label>
+            <select name="table_name" id="table_name">
+                <option value="Images">Images</option>
+                <option value="Tables">Tables</option>
+                <option value="Texts">Texts</option>
+                <option value="Addresses">Addresses</option>
+                <option value="FigureCaptions">FigureCaptions</option>
+                <option value="Footers">Footers</option>
+                <option value="Formulas">Formulas</option>
+                <option value="Headers">Headers</option>
+                <option value="ListItems">ListItems</option>
+                <option value="NarrativeTexts">NarrativeTexts</option>
+                <option value="PageBreaks">PageBreaks</option>
+                <option value="Titles">Titles</option>
+                <option value="UncategorizedTexts">UncategorizedTexts</option>
+            </select>
+            <button type="submit">View Data</button>
+        </form>
+        {% if data %}
+        <table>
+            <thead>
+                <tr>
+                    {% for key in data[0].keys() %}
+                    <th>{{ key }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in data %}
+                <tr>
+                    {% for value in row.values() %}
+                    <td>{{ value }}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% endif %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  web:
+    image: masallaherim/parse_pdf:lastest  # Docker Hub'daki imajınızı kullanın
+    ports:
+      - "8888:8888"  # Flask uygulamanızın çalıştığı port
+    depends_on:
+      - db
+  db:
+    image: postgres:latest  # PostgreSQL imajı
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123
+      POSTGRES_DB: postgres
+    ports:
+      - "5433:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data  # Veritabanı verilerini saklamak için bir volume
+
+volumes:
+  pgdata:
