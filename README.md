@@ -1,4 +1,4 @@
-## Getting Started
+## Getting Started ##
 Make sure you have Docker and Docker Compose installed on your machine. You can follow the official installation guides:
 
 
@@ -6,7 +6,7 @@ Make sure you have Docker and Docker Compose installed on your machine. You can 
 - [Docker Compose Installation](https://docs.docker.com/compose/install/)
 
 
-### Prerequisites
+### Prerequisites ###
 
 
 #Run Docker Compose:
@@ -16,7 +16,7 @@ Make sure you have Docker and Docker Compose installed on your machine. You can 
 This command will start the Flask web application and PostgreSQL database in separate containers.
 
 
-### Kullanım ###
+### Usage ###
 
 #Access the Application:
 Open your web browser and go to http://localhost:8888/upload.
@@ -31,7 +31,7 @@ After uploading the PDF, click the "Process Latest PDF" button to extract text f
 Click the "View Data" button to display the extracted data in a table format.
 
 
-###Stop the Services:
+###Stop the Services ###
 
 #To stop the services:
 
