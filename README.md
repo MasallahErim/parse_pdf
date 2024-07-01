@@ -12,7 +12,7 @@ Make sure you have Docker and Docker Compose installed on your machine. You can 
 #Run Docker Compose:
 
 ```sh
-docker-compose stop
+docker-compose up
 ```
 
 This command will start the Flask web application and PostgreSQL database in separate containers.
